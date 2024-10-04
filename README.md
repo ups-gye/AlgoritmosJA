@@ -15,3 +15,7 @@ MÉNDEZ PÉREZ PEDRO XAVIER
 PARRA REINOSO SANTIAGO DE JESÚS
 
 TENE GUAMÁN ADRIÁN RODRIGO
+
+
+URL GitHub:
+https://github.com/ups-gye/AlgoritmosJA.git

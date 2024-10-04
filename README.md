@@ -3,6 +3,7 @@ AlgoritmosJA
 ![logo](https://github.com/user-attachments/assets/91161876-fc3a-4929-8f66-400f0c716675)
 
 Integrantes
+
 ABRIL ZAMBRANO SANDRA ADRIANA
 
 ÁLVAREZ ZHAPA CARLOS DANIEL

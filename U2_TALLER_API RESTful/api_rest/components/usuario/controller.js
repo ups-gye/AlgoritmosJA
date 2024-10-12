@@ -20,22 +20,23 @@ function obtener_usuario( dato ) {
     } )
 }
 
-function actualizar_usuario( dato ) {
+function actualizar_usuario(dato) {
     return new Promise((resolve, reject) => {
-        let resultado = storage.actualizar( dato )
+        let resultado = storage.actualizar(dato);
         if (resultado) {
-            return resolve( dato )
+            return resolve(dato);
         } else {
-            reject('No existe usuario actualizar.')
+            reject('No existe usuario para actualizar.');
         }
-    })
+    });
 }
 
-function eliminar_usuario( dato ) {
+function eliminar_usuario(dato) {
     return new Promise((resolve, reject) => {
-        storage.eliminar( dato )
-        resolve( dato )
-    })
+        storage.eliminar(dato)
+            .then(() => resolve(dato))
+            .catch(() => reject('Error al eliminar el usuario.'));
+    });
 }
 
 module.exports = {

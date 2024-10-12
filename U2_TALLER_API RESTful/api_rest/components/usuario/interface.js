@@ -18,15 +18,15 @@ routes.get('/', function(req, res) {
 })
 
 routes.put('/', function(req, res) {
-    controller.actualizar_usuario( req.body )
-        .then( (data) => response.success(req, res, data, 200) )
-        .catch( (error) => response.error(req, res, error, 400) )
-})
+    controller.actualizar_usuario(req.body)
+        .then((data) => response.success(req, res, data, 200))
+        .catch((error) => response.error(req, res, error, 400));
+});
 
 routes.delete('/', function(req, res) {
-    controller.eliminar_usuario( req.body )
-        .then( (data) => response.success(req, res, data, 200) )
-        .catch( (error) => response.error(req, res, error, 400) )
-})
+    controller.eliminar_usuario(req.body)
+        .then((data) => response.success(req, res, data, 200))
+        .catch((error) => response.error(req, res, error, 400));
+});
 
 module.exports = routes

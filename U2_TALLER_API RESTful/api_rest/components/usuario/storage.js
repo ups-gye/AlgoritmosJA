@@ -16,19 +16,20 @@ async function obtener_usuario(dato) {
      return resultado
 }
 
-async function actualizar_usuario( dato ) {
-    const objeto = await model.findOne( {apellido: dato.apellido} )
+async function actualizar_usuario(dato) {
+    const objeto = await model.findById(dato._id);
 
-    if ( objeto ) {
-        objeto.nombre = dato.nombre    
-        return resultado = await objeto.save()    
+    if (objeto) {
+        objeto.nombre = dato.nombre;
+        objeto.apellido = dato.apellido;
+        return await objeto.save();
     } else {
-        return null
+        return null;
     }
 }
 
-async function eliminar_usuario( dato ) {
-    return await model.deleteOne({apellido: dato.apellido})
+async function eliminar_usuario(dato) {
+    return await model.deleteOne({ _id: dato._id });
 }
 
 module.exports = {

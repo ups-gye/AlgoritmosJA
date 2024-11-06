@@ -50,7 +50,7 @@ public class Movimiento {
         return movimientoValor;
     }
 
-    public void setMovimientoValor(Double movimientoValor) {  // Cambiado a BigDecimal
+    public void setMovimientoValor(Double movimientoValor) {  
         this.movimientoValor = movimientoValor;
     }
 

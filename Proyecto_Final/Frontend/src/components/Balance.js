@@ -5,9 +5,9 @@ function AccountBalance() {
   const [error, setError] = useState(null); // Estado para manejar errores de conexión
 
   useEffect(() => {
-    // Obtiene el token y el clienteId del localStorage
+    
     const token = localStorage.getItem('jwtToken');
-    const clienteId = localStorage.getItem('clienteId'); // Asegúrate de que este dato esté guardado en localStorage
+    const clienteId = localStorage.getItem('clienteId'); 
 
     if (!token || !clienteId) {
       setError('No se encontró un token de autenticación o ID de cliente. Inicia sesión nuevamente.');

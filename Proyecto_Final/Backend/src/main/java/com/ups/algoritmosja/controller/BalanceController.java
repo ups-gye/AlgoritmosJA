@@ -15,6 +15,6 @@ public class BalanceController {
     @MessageMapping("/getBalance")  // El cliente envía aquí el ID de la cuenta
     @SendTo("/topic/balance")       // La respuesta se envía al cliente en este canal
     public double getBalance(Long idCliente) {
-        return balanceService.getBalanceById(idCliente); // Implementar método en BalanceService
+        return balanceService.getBalanceById(idCliente); 
     }
 }

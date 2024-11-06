@@ -1,46 +1,89 @@
 .transaction-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-  }
-  
-  .transaction-form {
-    display: flex;
-    flex-direction: column;
-    width: 300px;
-    padding: 20px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  }
-  
-  .transaction-form h2 {
-    text-align: center;
-    margin-bottom: 20px;
-  }
-  
-  .transaction-form label {
-    margin-bottom: 5px;
-  }
-  
-  .transaction-form input {
-    margin-bottom: 15px;
-    padding: 8px;
-    font-size: 16px;
-  }
-  
-  .transaction-form button {
-    padding: 10px;
-    font-size: 16px;
-    background-color: #007bff;
-    color: #fff;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-  }
-  
-  .transaction-form button:hover {
-    background-color: #0056b3;
-  }
-  
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.transaction-form {
+  display: flex;
+  flex-direction: column;
+  width: 800px; /* Ajuste del ancho para hacer el cuadro más grande */
+  padding: 100px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.15);
+  background-color: #fff;
+  position: relative;
+}
+
+.transaction-form h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 1.5em;
+}
+
+.transaction-form label {
+  margin-bottom: 5px;
+  font-weight: bold;
+  color: #333;
+}
+
+.transaction-form input {
+  margin-bottom: 20px;
+  padding: 8px;
+  font-size: 16px;
+  border: none;
+  border-bottom: 2px solid #ccc;
+  outline: none;
+  transition: border-color 0.3s;
+}
+
+.transaction-form input:focus {
+  border-bottom: 2px solid #007bff;
+}
+
+.transaction-form button {
+  padding: 12px;
+  font-size: 16px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 15px;
+}
+
+.transaction-form button:hover {
+  background-color: #0056b3;
+}
+
+.back-button {
+  position: absolute;
+  left: 0;
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: #6c757d;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.back-button:hover {
+  background-color: #5a6268;
+}
+
+/* Mensajes de éxito y error */
+.success-message {
+  color: green;
+  margin-top: 10px;
+}
+
+.error-message {
+  color: red;
+  margin-top: 10px;
+}

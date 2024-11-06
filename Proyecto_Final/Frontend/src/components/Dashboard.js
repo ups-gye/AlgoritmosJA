@@ -11,6 +11,8 @@ function Dashboard() {
     fetchSaldo();
   }, []);
 
+  const clienteName = localStorage.getItem('usuarioName');
+
   const fetchSaldo = () => {
     setError(null);
     const token = localStorage.getItem('jwtToken');
@@ -56,7 +58,7 @@ function Dashboard() {
 
   const handleLogout = () => {
     localStorage.removeItem('jwtToken');
-    navigate('/login');
+    navigate('/');
   };
 
   const handleTransactionClick = () => {
@@ -65,7 +67,7 @@ function Dashboard() {
 
   return (
     <div className="dashboard-container">
-      <h2>Bienvenido a tu Dashboard</h2>
+      <h2>Bienvenido <strong>{clienteName}</strong> a tu Banca Web</h2>
       <div className="balance-card">
         <h3>Saldo de la Cuenta</h3>
         {error ? (

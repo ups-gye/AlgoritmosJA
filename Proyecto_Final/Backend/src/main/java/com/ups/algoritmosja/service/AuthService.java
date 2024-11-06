@@ -35,7 +35,7 @@ public class AuthService {
             String token = jwtUtil.generateToken(request.getUsuarioName());
             Map<String, Object> userDetails = new HashMap<>();
             userDetails.put("usuarioId", usuario.getUsuarioId());
-            userDetails.put("clienteId", usuario.getUsuarioClienteId());  // Asegúrate de tener el campo clienteId en Usuario
+            userDetails.put("clienteId", usuario.getUsuarioClienteId());  
             userDetails.put("usuarioName", usuario.getUsuarioName());
             userDetails.put("token", token);
             return ResponseEntity.ok(userDetails);

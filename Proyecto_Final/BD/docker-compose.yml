@@ -9,7 +9,7 @@ services:
       MYSQL_USER: algoritmosja
       MYSQL_PASSWORD: 123
     ports:
-      - "3307:3306"  # Exponer MySQL en el puerto 3307 para acceso externo (host)
+      - "3307:3306"  
     volumes:
       - db_data:/var/lib/mysql
       - /c/ScriptBD.sql:/docker-entrypoint-initdb.d/ScriptBD.sql

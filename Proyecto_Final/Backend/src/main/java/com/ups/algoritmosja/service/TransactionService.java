@@ -47,7 +47,7 @@ public class TransactionService {
             response.put("message", "Transacción realizada exitosamente");
             response.put("saldoCuentaOrigen", cuentaOrigen.getCuentaSaldo());
             response.put("saldoCuentaDestino", cuentaDestino.getCuentaSaldo());
-            response.put("transaccionId", movimiento. getMovimientoId()); // Si `Movimiento` tiene un ID generado
+            response.put("transaccionId", movimiento. getMovimientoId()); 
 
             return ResponseEntity.ok(response);
         } else {

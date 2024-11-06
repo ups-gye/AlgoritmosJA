@@ -16,7 +16,7 @@ function Dashboard() {
   const fetchSaldo = () => {
     setError(null);
     const token = localStorage.getItem('jwtToken');
-    const clienteId = localStorage.getItem('clienteId'); // Asegúrate de que este dato esté guardado en localStorage
+    const clienteId = localStorage.getItem('clienteId'); 
 
     if (!token || !clienteId) {
       setError('No se encontró un token de autenticación o ID de cliente. Inicia sesión nuevamente.');

@@ -1,0 +1,30 @@
+version: '3.8'
+services:
+  db:
+    image: mysql:8.0
+    container_name: algoritmosja-db
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: algoritmosjabank
+      MYSQL_USER: algoritmosja
+      MYSQL_PASSWORD: 123
+    ports:
+      - "3307:3306"  # Exponer MySQL en el puerto 3307 para acceso externo (host)
+    volumes:
+      - db_data:/var/lib/mysql
+      - /c/ScriptBD.sql:/docker-entrypoint-initdb.d/ScriptBD.sql
+    healthcheck:
+      test: ["CMD", "mysqladmin", "ping", "-h", "localhost"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+    networks:
+      - algoritmosja-network
+
+networks:
+  algoritmosja-network:
+    name: algoritmosja-network
+    driver: bridge
+
+volumes:
+  db_data:

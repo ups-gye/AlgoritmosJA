@@ -1,0 +1,17 @@
+version: '3.8'
+
+services:
+  backend:
+    build: .
+    ports:
+      - "8080:8080"  # Expone el puerto 8080 del contenedor al puerto 8080 de la máquina
+    environment:
+      SPRING_DATASOURCE_URL: jdbc:mysql://algoritmosja-db:3306/algoritmosjabank
+      SPRING_DATASOURCE_USERNAME: algoritmosja
+      SPRING_DATASOURCE_PASSWORD: 123
+    networks:
+      - algoritmosja-network
+
+networks:
+  algoritmosja-network:
+    external: true
